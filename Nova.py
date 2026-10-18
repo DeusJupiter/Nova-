@@ -10,7 +10,8 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key="API key",  # Trage hier deinen echten OpenRouter API-Key ein
+    api_key=os.getenv("OPENROUTER_API_KEY"),
+)
 )
 
 chats_memory = {}
